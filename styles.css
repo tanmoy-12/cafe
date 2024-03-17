@@ -1,0 +1,238 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Loilo", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.navbar{
+  justify-content: center;
+  text-align: center;
+  /* background: linear-gradient(to right, #000000 , #bfbebe , #595959); */
+  background-color: rgb(29, 29, 29);
+  color: rgb(245, 90, 0);
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header-nav{
+  margin: 0 auto;
+  height: 400px;
+}
+
+.header-bg {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent), url("./1.jpeg");
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 400px;
+  z-index: -1;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  /* filter: blur(6px); */
+}
+
+
+.header-content{
+  color: aliceblue;
+  font-size: larger;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-element {
+  padding: 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  /* background-color: rgb(0, 0, 0); */
+  max-width: 1200px;
+  color: #d4d4d4;
+}
+
+.content{
+  width: 50%;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.content h1 span {
+  font-weight: 400;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+  font-size: larger;
+  font-weight: 700;
+  text-align: justify;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #292417;
+  font-size: large;
+  background-color: #ffa33a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+.btn:hover {
+  background-color: #da8702;
+}
+
+.image {
+  position: relative;
+  text-align: center;
+  isolation: isolate;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+.image img {
+  width: 100%;
+  max-width: 475px;
+  border-radius: 8%;
+}
+
+.header-content h1{
+  margin: 10px;
+}
+
+.container-1{
+  background-color: rgb(46, 46, 46);
+  margin: 0 auto;
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+}
+
+.container-1-child{
+  display: flex;
+  max-width: 1400px;
+}
+
+.choose-left{
+  width: 50%;
+  padding: 15px 30px;
+  color: #ffff;
+  justify-content: center;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.choose-right{
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  display: flex;
+  gap: 20px;
+ flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 280px;
+  margin: 20px;
+  background-color: rgb(106, 106, 106);
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Adjust the shadow as needed */
+  transition: all ease 1s;
+}
+
+.card:hover {
+  transform: scale(1.08); /* Scale up by 5% on hover */
+}
+
+
+.card-top{
+  color: #ff4800;
+  font-size: 56px;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-bottom{
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.card-bottom p{
+  text-align: center;
+  margin-top: 18px;
+  font-weight: bold;
+  font-size: large;
+  color: antiquewhite;
+}
+
+.customer{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.customer-bg{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent), url("./2.jpeg");
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 200px;
+  z-index: -1;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.customer-card{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.customer-card i{
+  color: #ff4800;
+  font-size: 48px;
+}
+
+.customer-card h2{
+  font-size: 42px;
+  margin: 15px;
+}
