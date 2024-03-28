@@ -255,13 +255,89 @@
                 </div>
             </div>
         </div>
-        <div class="maps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.7617858049766!2d88.41715867602186!3d22.885256579270198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f896bd38616857%3A0x7c49f943e8fd659e!2sE%20Digital%20India!5e0!3m2!1sen!2sin!4v1711601851253!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="find-us">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.7617858049766!2d88.41715867602186!3d22.885256579270198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f896bd38616857%3A0x7c49f943e8fd659e!2sE%20Digital%20India!5e0!3m2!1sen!2sin!4v1711601851253!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="find-us-content">
+                <h1>Find Us</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, laboriosam doloremque odio delectus, sunt magnam laborum impedit molestiae, magni quae ipsum, ullam eos! Alias suscipit impedit et, adipisci illo quam.</p>
+                <div class="contacts">
+                    <div class="contact-logo">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>VCP9+4V5, Ananda Bazar Rd, Naihati Urban, Naihati, Kolkata, West Bengal 743165</p>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <div class="contact-logo">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p>(123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <div class="contact-logo">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-text">
+                        <p> info@website.com</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="popup-link">
+            <a href="#" id="showPopup">Check Price of Services</a>
+        </div>
+
+        <div class="popup-background" id="popupBackground"></div>
+
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close" id="closePopup">&times;</span>
+                <h2>Services & Prices</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Service 1</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>Service 2</td>
+                            <td>$70</td>
+                        </tr>
+                        <tr>
+                            <td>Service 3</td>
+                            <td>$90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+        
   </div>
 
 
   <script>
+    document.getElementById('showPopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'block';
+    document.getElementById('popupBackground').style.display = 'block';
+});
+
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+    document.getElementById('popupBackground').style.display = 'none';
+});
+
 
   </script>
 </body>
