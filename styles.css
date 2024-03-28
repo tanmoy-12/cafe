@@ -425,10 +425,11 @@ body {
 
 .contact-text p{
   margin: 0;
+  font-weight: 500;
 }
 
 .popup-link{
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   text-align: center;
 }
 
@@ -492,8 +493,18 @@ table {
 th, td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  font-size: larger;
 }
 
 th {
   background-color: #f2f2f2;
+}
+
+tr{
+  
+  transition: all ease 1s;
+}
+
+tr:hover{
+  background-color: #da8702;
 }
