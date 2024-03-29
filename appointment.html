@@ -29,10 +29,20 @@
         <div class="flex flex-wrap formbold--mx-3">
           <div class="w-full sm:w-half formbold-px-3">
             <div class="formbold-mb-5 w-full">
-              <label for="date" class="formbold-form-label"> Prefered Appointment Time </label>
-              <input type="datetime-local" id="date" name="message" class="formbold-form-input" required />
+              <label for="date" class="formbold-form-label"> Date </label>
+              <input type="date" id="date" name="date" class="formbold-form-input" required />
             </div>
           </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="time" class="formbold-form-label"> Time </label>
+              <input type="time" name="time" id="time" class="formbold-form-input" required />
+            </div>
+          </div>
+        </div>
+        <div class="formbold-mb-5">
+          <label for="message" class="formbold-form-label"> Reason for Appointment </label>
+          <input type="message" id="message" name="message" class="formbold-form-input" required />
         </div>
         <button type="submit" class="formbold-btn">Book Appointment</button>
       </form>
