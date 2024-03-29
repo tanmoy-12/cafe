@@ -536,8 +536,28 @@ tr:hover{
 }
 
 @media (max-width: 500px){
+
+  .header-element{
+    padding: 1.8rem;
+  }
+
+  .header-content h1{
+    font-size: 2rem;
+  }
   .wrapper{
     display: flex;
     flex-direction: column;
+  }
+
+  .container-1-child{
+    text-align: center;
+  }
+
+  .container-1-child h3{
+    font-size: 1.5rem !important;
+  }
+
+  .service-content{
+    max-width: 95%;
   }
 }
