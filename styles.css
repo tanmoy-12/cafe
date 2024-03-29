@@ -560,4 +560,12 @@ tr:hover{
   .service-content{
     max-width: 95%;
   }
+
+  .customer-card{
+    margin: 10px;
+  }
+
+  .find-us-content{
+    padding: 40px 0 40px  15px;
+  }
 }
