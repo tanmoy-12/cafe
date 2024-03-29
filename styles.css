@@ -508,3 +508,36 @@ tr{
 tr:hover{
   background-color: #da8702;
 }
+
+
+@media (max-width: 900px){
+  .header-element{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  .find-us{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .maps{
+    width: 100%;
+  }
+
+  .find-us-content{
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+}
