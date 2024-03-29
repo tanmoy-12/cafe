@@ -3,122 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Gallery</title>
-    <style>
-
-.wrapper {
-    display: flex;
-    width: 90%;
-    justify-content: center;
-}
-
-.employeecard {
-    width: 200px;
-    height: 280px;
-    margin: 20px;
-    border-radius: 15px;
-    padding: 1.5rem;
-    background: white;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    transition: 0.4s ease-out;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-}
-
-.employeecard:hover {
-    transform: translateY(20px);
-}
-
-.employeecard:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.employeecard:hover:before {
-    opacity: 1;
-}
-
-.employeecard img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 15px;
-}
-
-.employeecard .info {
-    position: relative;
-    z-index: 3;
-    color: white;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.5s;
-}
-
-.employeecard:hover .info {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.employeecard .info h1 {
-    margin: 0px;
-}
-
-.employeecard .info p {
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: 700;
-    margin-top: 8px;
-}
-
-.employeecard .info button {
-    padding: 0.6rem;
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    background: white;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-
-.employeecard .info button:hover {
-    background: dodgerblue;
-    color: white;
-}
-
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="employeecard">
-            <img src="R.png" alt="Mountain">
-            <div class="info">
-                <h1>Mountain</h1>
-                <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-            </div>
+    <form id="appointment-form">
+        <div class="formbold-mb-5">
+            <label for="name" class="formbold-form-label">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" />
         </div>
-        <div class="employeecard">
-            <img src="R.png" alt="Road">
-            <div class="info">
-                <h1>Road</h1>
-                <p>Lorem Ipsum is simply dummy text from the printing and typeseting industry</p>
-            </div>
+        <div class="formbold-mb-5">
+            <label for="phone" class="formbold-form-label">Phone Number</label>
+            <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
         </div>
-    </div>
+        <div class="formbold-mb-5">
+            <label for="email" class="formbold-form-label">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" />
+        </div>
+        <div class="formbold-mb-5">
+            <label for="message" class="formbold-form-label">Message</label>
+            <input type="message" name="message" id="message" placeholder="Enter your message" class="formbold-form-input" />
+        </div>
+        <!-- Add appointment date and time input fields here -->
+        <!-- Example: <input type="datetime-local" name="appointmentDateTime" id="appointmentDateTime" /> -->
+    
+        <button type="button" onclick="sendAppointment()">Book Appointment</button>
+    </form>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your user ID
+        emailjs.init('lEUcQj8FrMJspVoh7');
+    
+        // Function to send the appointment details
+        function sendAppointment() {
+            const form = document.getElementById('appointment-form');
+            const name = form.elements.name.value;
+            const email = form.elements.email.value;
+            const phone = form.elements.phone.value;
+            const message = form.elements.message.value;
+            // Get the appointment date and time (if you added that field)
+    
+            // Set up the email template
+            const templateParams = {
+                to_email: 'tanmoy5chanda@gmail.com', // Replace with your recipient's email address
+                from_name: name,
+                from_email: email,
+                phone: phone,
+                message: message,
+                // Add appointment date and time to templateParams if needed
+            };
+    
+            // Send the email
+            emailjs.send('service_c4z771e', 'template_w2jm7lo', templateParams)
+                .then(function (response) {
+                    console.log('Email sent successfully:', response);
+                    // Show a confirmation message to the user
+                    alert('Mail Sent, Waiting for confirmation');
+                })
+                .catch(function (error) {
+                    console.error('Error sending email:', error);
+                });
+        }
+    </script>
+    
 </body>
 </html>
